@@ -1,130 +1,145 @@
-# password-strength-checker
-🔐 Password Strength Checker &amp; Generator - A C++ CLI tool that validates password strength based on security requirements and generates strong random passwords. Features color-coded output, multiple password generation, and comprehensive strength analysis.
+# 🔐 SecureKey
 
-# 🔐 Password Strength Checker & Generator
+**SecureKey** is a C++ command-line application that helps users create and evaluate strong passwords. It combines a **Password Strength Checker** with a **Secure Password Generator**, making it a simple yet practical cybersecurity utility for learning and everyday use.
 
-A comprehensive command-line tool built in C++ that checks password strength and generates secure random passwords. This tool enforces strong password policies by validating against industry-standard security requirements.
+---
 
 ## ✨ Features
 
-- **Password Validation**: Checks if a password meets security requirements
-  - Minimum 8 characters, maximum 16 characters
-  - At least one uppercase letter (A-Z)
-  - At least one lowercase letter (a-z)
-  - At least one digit (0-9)
-  - At least one special character (!@#$%^&*()_+-=[]{}\|;:'",.<>/?)
+### 🔍 Password Strength Checker
 
-- **Password Generation**: Creates strong random passwords
-  - Customizable length (8-16 characters)
-  - Guarantees at least one character from each required category
-  - Randomly shuffled for maximum security
-  - Generate multiple passwords at once
+Validate passwords against common security best practices:
 
-- **User-Friendly Interface**
-  - Color-coded output (red for errors, yellow for warnings, green for success)
-  - Clear feedback on validation failures
-  - Interactive menu system
+* ✅ Length between **8 and 16 characters**
+* ✅ At least **one uppercase letter**
+* ✅ At least **one lowercase letter**
+* ✅ At least **one digit**
+* ✅ At least **one special character**
+* ✅ Clear feedback explaining why a password is considered weak
 
-## 🚀 Getting Started
+### 🔑 Secure Password Generator
 
-### Prerequisites
+Generate strong passwords with customizable options:
 
-- C++ compiler (g++ recommended)
-- C++11 or higher
+* Choose password length (8–16 characters)
+* Generate multiple passwords at once
+* Includes uppercase, lowercase, numbers, and special characters
+* Characters are randomized for improved password complexity
 
-### Installation
+### 🎨 User-Friendly CLI
 
-1. Clone the repository:
+* Interactive menu system
+* Color-coded terminal output
+* Easy-to-understand validation messages
+* Lightweight and fast
+
+---
+
+# 🚀 Getting Started
+
+## Requirements
+
+* C++11 or later
+* g++ (or any compatible C++ compiler)
+
+## Installation
+
+Clone the repository:
+
 ```bash
-git clone https://github.com/yourusername/password-strength-checker.git
-cd password-strength-checker
+git clone https://github.com/yourusername/SecureKey.git
+cd SecureKey
 ```
-2. Compile the program:
+
+Compile:
+
 ```bash
-g++ -std=c++11 main.cpp -o password-checker
-```
-3. Run the program:
-```bash
-./password-checker
+g++ -std=c++11 main.cpp -o SecureKey
 ```
 
-Usage
-```bash
-PASSWORD STRENGTH CHECKER
-Requirements: 8-16 chars, at least 1 upper, 1 lower, 1 digit, 1 special
+Run:
 
-Menu:
+```bash
+./SecureKey
+```
+
+---
+
+# 📖 Usage
+
+When the application starts:
+
+```text
 1. Check Password
 2. Generate Password
 3. Exit
-
-Choose Option:
-Check Password
-Enter your password: 
-
-The tool will validate it against all requirements
-
-Provides specific feedback on what's missing
-
-Option 2: Generate Password
-Choose password length (8-16)
-
-Specify how many passwords to generate
-
-Get strong random passwords instantly
-
-Option 3: Exit
-Exit the program
 ```
 
-## 📝 Code Structure
-```bash
-main.cpp
-├── check_password_strength()
-│   ├── Validates password length (8-16 chars)
-│   ├── Checks for uppercase letters
-│   ├── Checks for lowercase letters
-│   ├── Checks for digits
-│   └── Checks for special characters
-├── generate_password()
-│   ├── Generates random passwords
-│   ├── Ensures all character types are included
-│   └── Shuffles characters for randomness
-└── main()
-    ├── Displays menu
-    ├── Handles user input
-    └── Calls appropriate functions
+### Password Checker
+
+* Enter a password.
+* SecureKey verifies all security requirements.
+* Missing requirements are displayed with helpful messages.
+
+### Password Generator
+
+* Select a password length.
+* Choose how many passwords to generate.
+* Receive secure, randomly generated passwords instantly.
+
+---
+
+# 📂 Project Structure
+
+```text
+SecureKey/
+│
+├── main.cpp
+├── README.md
+└── LICENSE
 ```
 
-## 🛠️ Technologies Used
-Language: C++
-Libraries:
-iostream - Input/Output operations
-string - String manipulation
-cstdlib - Random number generation
-ctime - Seed for random generator
-algorithm - Shuffle functionality
+---
 
-## 🎨 Color Coding
-🔴 Red: Errors and invalid inputs
-🟡 Yellow: Warnings and missing requirements
-🟢 Green: Success and valid passwords
-⚪ Reset: Default text color
+# ⚙️ Technologies Used
 
-### 📊 Example Output
-```bash
+**Language**
+
+* C++
+
+**Standard Libraries**
+
+* iostream
+* string
+* cstdlib
+* ctime
+* algorithm
+
+---
+
+# 📸 Example Output
+
+### Password Strength Checker
+
+```text
 Enter your password: weak
+
 PASSWORD MUST BE BETWEEN 8 AND 16 CHARACTERS
 
 Enter your password: WeakPassword
+
 WEAK PASSWORD! Must contain:
 - At least one digit
 - At least one special character
 
 Enter your password: StrongP@ssw0rd!
+
 STRONG PASSWORD! All requirements met.
-Password Generation
-text
+```
+
+### Password Generator
+
+```text
 Enter password length (8-16): 12
 How many passwords to generate? 3
 
@@ -135,10 +150,37 @@ Password 3: jH*1pL^6iG$4
 Remember to save your password securely!
 ```
 
-## 🔒 Security Best Practices
-This tool follows industry-standard password security practices:
-Enforces minimum length requirements
-Requires character diversity
-Generates cryptographically random passwords (using time-based seeding)
-Does not store or transmit passwords
+---
 
+# 🛡️ Security Notes
+
+SecureKey follows common password security guidelines by:
+
+* Enforcing minimum password length
+* Requiring character diversity
+* Ensuring generated passwords include every required character type
+* Never storing passwords
+* Never transmitting passwords over a network
+
+---
+
+# 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a **⭐ Star** on GitHub.
