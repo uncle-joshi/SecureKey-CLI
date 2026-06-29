@@ -201,6 +201,14 @@ WEAK PASSWORD! Must contain:
 - At least one special character
 
 Enter your password: StrongP@ssw0rd!
+Password analysis:
+  Uppercase: 1 (Score: +1)
+  Lowercase: 3 (Score: +2)
+  Digits: 5 (Score: +2)
+  Special: 1 (Score: +2)
+  Length: 10 (Bonus: +1)
+
+Total Score: 8 out of 10
 
 STRONG PASSWORD! All requirements met.
 ```
