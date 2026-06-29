@@ -15,7 +15,9 @@ Validate passwords against common security best practices:
 * ✅ At least **one lowercase letter**
 * ✅ At least **one digit**
 * ✅ At least **one special character**
+* ✅ **Score-based rating system** (1-10) for password strength
 * ✅ Clear feedback explaining why a password is considered weak
+* ✅ Detailed breakdown of character composition and scoring
 
 ### 🔑 Secure Password Generator
 
@@ -32,6 +34,72 @@ Generate strong passwords with customizable options:
 * Color-coded terminal output
 * Easy-to-understand validation messages
 * Lightweight and fast
+
+---
+
+## 📊 Password Scoring System
+
+SecureKey uses a comprehensive scoring system to evaluate password strength on a scale of **1 to 10**. The score is calculated based on:
+
+### Character Type Scoring
+
+| Character Type | Count | Points Awarded |
+|----------------|-------|----------------|
+| **Uppercase** | 1-2 | +1 |
+| | 3-5 | +2 |
+| | 6+ | +3 |
+| **Lowercase** | 1-2 | +1 |
+| | 3-5 | +2 |
+| | 6+ | +3 |
+| **Digits** | 1-2 | +1 |
+| | 3-5 | +2 |
+| | 6+ | +3 |
+| **Special** | 1-2 | +2 |
+| | 3-5 | +4 |
+| | 6+ | +6 |
+
+### Length Bonus
+
+| Password Length | Bonus Points |
+|-----------------|--------------|
+| 8-10 characters | +1 |
+| 11-13 characters | +2 |
+| 14-16 characters | +3 |
+
+### Score Ratings
+
+| Score Range | Rating |
+|-------------|--------|
+| 9-10 | 🟢 EXCELLENT - Very strong! |
+| 7-8 | 🟢 STRONG - All requirements met |
+| 5-6 | 🟡 MODERATE - Consider adding more variety |
+| 0-4 | 🔴 WEAK - Improve with more character types |
+
+### Scoring Examples
+
+**Password: `zAin@12345`**
+- Uppercase: 1 → +1
+- Lowercase: 3 → +2
+- Digits: 5 → +2
+- Special: 1 → +2
+- Length Bonus (10 chars) → +1
+- **Total Score: 8/10** 🟢 STRONG
+
+**Password: `P@ssw0rd#2024!`**
+- Uppercase: 2 → +1
+- Lowercase: 4 → +2
+- Digits: 4 → +2
+- Special: 3 → +4
+- Length Bonus (13 chars) → +2
+- **Total Score: 10/10** 🟢 EXCELLENT
+
+**Password: `Abc123`**
+- Uppercase: 1 → +1
+- Lowercase: 2 → +1
+- Digits: 3 → +2
+- Special: 0 → +0
+- Length Bonus (6 chars) → +0 (fails minimum length)
+- **Total Score: 4/10** 🔴 WEAK
 
 ---
 
