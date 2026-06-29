@@ -77,7 +77,7 @@ SecureKey uses a comprehensive scoring system to evaluate password strength on a
 
 ### Scoring Examples
 
-**Password: `zAin@12345`**
+**Password: `nAme@12345`**
 - Uppercase: 1 → +1
 - Lowercase: 3 → +2
 - Digits: 5 → +2
